@@ -1,0 +1,187 @@
+h1{margin:0px;}
+.page.sf-m-android
+{
+    background: #222222;
+    color: White;
+}
+.page.sf-m-ios *
+{
+    font-family: Helvetica,sans-serif;
+}
+.page.sf-m-android *
+{
+    text-shadow: none;
+    font-family: roboto, Sans-Serif;
+}
+.page.sf-m-windows #main
+{
+    margin-top:55px;
+}
+@media only screen and (device-width:1280px) and (orientation:landscape) , (min-width : 1224px) {
+.sf-tablet div.imgcontainer
+{
+margin-left:0px;
+}
+.imgcontainer .html5
+{
+    float: left;
+}
+	.sf-tablet .imgcontainer .android,.sf-tablet .imgcontainer .ios,.sf-tablet .imgcontainer .windows,.sf-tablet .imgcontainer .native,.sf-tablet .imgcontainer .hybrid,.sf-tablet .imgcontainer .vsstudio
+{
+	display: inline-block;
+    position: relative;
+}
+}
+.page.sf-m-windows *
+{
+    text-shadow: none;
+    font-family: Segoe WP;
+}
+.page.sf-m-windows
+{
+    background: black;
+    color:white;
+}
+.sf-tablet .page.sf-m-windows
+{
+    background: white;
+    color:black;
+}
+.sf-m-android input
+{
+color:white;
+}
+p.paragraph
+{
+word-wrap:break-word;
+-webkit-hyphens:auto;
+display:block;
+text-align:justify;
+padding-bottom:20px;
+}
+.sf-tablet div.imgcontainer
+{
+	margin:0px 0px 10px 20px;
+}
+.imgcontainer .android,.imgcontainer .ios,.imgcontainer .windows
+{
+width:128px;
+height:175px;
+padding:0 20px;
+}
+.imgcontainer .android{
+background:url("images/Android.png") no-repeat scroll center center transparent;
+}
+.imgcontainer .ios{
+background:url("images/Apple.png") no-repeat scroll center center transparent;
+}
+.imgcontainer .windows{
+background:url("images/Windows8.png") no-repeat scroll center center transparent;
+}
+.imgcontainer .androidlabel,.imgcontainer .ioslabel,.imgcontainer .windowslabel
+{
+width:128px;
+height:20px;
+text-align:center;
+}
+.imgcontainer .native,.imgcontainer .hybrid,.imgcontainer .vsstudio
+{
+height: 100px;
+width: 180px;
+padding:0px;
+}
+.imgcontainer .native{
+background:url("images/Image1.png") no-repeat scroll center center transparent;
+background-size:100% 100%;
+}
+.imgcontainer .hybrid{
+background:url("images/Image2.png") no-repeat scroll center center transparent;
+background-size:100% 100%;
+}
+.imgcontainer .vsstudio{
+background:url("images/Image3.png") no-repeat scroll center center transparent;
+background-size:100% 100%;
+}
+.imgcontainer .html5
+{
+background: url("images/Image4.png") no-repeat scroll center center transparent;
+background-size:100% 100%;
+    border: 5px solid #C6E1EE;
+    float: left;
+    margin: 20px 20px 0px 0px;
+    height: 226px;
+    width: 358px;
+}
+.imgcontainer .html5content
+{
+text-align:justify;
+word-wrap:break-word;
+-webkit-hyphens:auto;
+padding-top:20px;
+}
+div.imgcontainer
+{
+display:table;
+margin:auto;
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+.imgcontainer .html5
+{
+    width: 95%;
+float:none;
+}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+.sf-tablet div.imgcontainer
+{
+margin-left:0px;
+}
+.imgcontainer .html5
+{
+    float: left;
+}
+	.sf-tablet .imgcontainer .android,.sf-tablet .imgcontainer .ios,.sf-tablet .imgcontainer .windows,.sf-tablet .imgcontainer .native,.sf-tablet .imgcontainer .hybrid,.sf-tablet .imgcontainer .vsstudio
+{
+	display: inline-block;
+    position: relative;
+}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.sf-tablet .imgcontainer .android,.sf-tablet .imgcontainer .ios,.sf-tablet .imgcontainer .windows,.sf-tablet .imgcontainer .native,.sf-tablet .imgcontainer .hybrid,.sf-tablet .imgcontainer .vsstudio
+{
+	display:block;
+	 position: relative;
+}
+.sf-tablet div.imgcontainer
+{
+display:table;
+margin:auto;
+}
+.imgcontainer .html5
+{
+float:none;
+}
+}
+
+.sf-tablet .imgcontainer .androidlabel,.sf-tablet .imgcontainer .ioslabel,.sf-tablet .imgcontainer .windowslabel
+{
+position:absolute;
+bottom:0px;
+}
+#contentgrid
+{
+margin-bottom:30px;
+}
+html
+{
+    -ms-touch-action:none;
+}

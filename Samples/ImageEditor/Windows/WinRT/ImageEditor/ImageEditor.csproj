@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F4723D30-C176-4E28-A234-E6043C8D5B5E}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageEditor</RootNamespace>
+    <AssemblyName>ImageEditor</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>ImageEditor_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>2203B4AB15FF0D5F6901B08B0CABFFC7BACD4D80</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Tile1.png" />
+    <Content Include="Assets\Tile2.png" />
+    <Content Include="Assets\Tile3.png" />
+    <Content Include="Assets\Tile4.png" />
+    <Content Include="Assets\Tile5.png" />
+    <Content Include="WebApplication\Camera.html" />
+    <Content Include="WebApplication\css\images\ajax-loader.gif" />
+    <Content Include="WebApplication\css\images\ajax-loader.png" />
+    <Content Include="WebApplication\css\images\andback.png" />
+    <Content Include="WebApplication\css\images\Android.png" />
+    <Content Include="WebApplication\css\images\android_dark.png" />
+    <Content Include="WebApplication\css\images\android_light.png" />
+    <Content Include="WebApplication\css\images\Apple.png" />
+    <Content Include="WebApplication\css\images\bluelight.gif" />
+    <Content Include="WebApplication\css\images\darknight.gif" />
+    <Content Include="WebApplication\css\images\icons-18-black.png" />
+    <Content Include="WebApplication\css\images\icons-18-white.png" />
+    <Content Include="WebApplication\css\images\icons-36-black.png" />
+    <Content Include="WebApplication\css\images\icons-36-white.png" />
+    <Content Include="WebApplication\css\images\Image1.png" />
+    <Content Include="WebApplication\css\images\Image2.png" />
+    <Content Include="WebApplication\css\images\Image3.png" />
+    <Content Include="WebApplication\css\images\Image4.png" />
+    <Content Include="WebApplication\css\images\ios.png" />
+    <Content Include="WebApplication\css\images\Left-Arrow.png" />
+    <Content Include="WebApplication\css\images\Left-ArrowActive.png" />
+    <Content Include="WebApplication\css\images\metroblue.gif" />
+    <Content Include="WebApplication\css\images\sf-mobile-bluelight.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-common.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-darknight.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-metroblue.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-spinach.png" />
+    <Content Include="WebApplication\css\images\shared-sprite.png" />
+    <Content Include="WebApplication\css\images\spinach.gif" />
+    <Content Include="WebApplication\css\images\windows.png" />
+    <Content Include="WebApplication\css\images\Windows8.png" />
+    <Content Include="WebApplication\css\images\windowstool_dark.png" />
+    <Content Include="WebApplication\css\images\windowstool_light.png" />
+    <Content Include="WebApplication\css\jquery.mobile-1.3.1.min.css" />
+    <Content Include="WebApplication\css\sf.mobile.shared.min.css" />
+    <Content Include="WebApplication\css\site.mobile.css" />
+    <Content Include="WebApplication\js\jquery-2.0.2.min.js" />
+    <Content Include="WebApplication\js\jquery.mobile-1.3.1.min.js" />
+    <Content Include="WebApplication\js\Orubase-2.1.0.58.min.js" />
+    <Content Include="WebApplication\js\sf.mobile.core.min.js" />
+    <Content Include="WebApplication\js\sf.mobile.shared.min.js" />
+    <Content Include="WebApplication\js\Utility.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\OrubaseErrorStrings.resw" />
+    <PRIResource Include="Strings\en-US\OrubaseStrings.resw" />
+    <PRIResource Include="Strings\en-US\OrubaseSuccessStrings.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Orubase controls, Version=2.1.0.58">
+      <Name>Orubase Native Framework for WinRT</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebApplication\library\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WebApplication\.DS_Store" />
+    <None Include="WebApplication\css\.DS_Store" />
+    <None Include="WebApplication\js\.DS_Store" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

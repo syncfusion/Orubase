@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>ImageEditor</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/sf.mobile.shared.min.css" />
+        <link rel="stylesheet" href="css/site.mobile.css" />
+        
+        <script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="js/sf.mobile.core.min.js"></script>
+        <script type="text/javascript" src="js/sf.mobile.shared.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/Orubase-2.1.0.58.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/Utility.js"></script>
+        
+        <script type="text/javascript">
+
+            $(document).delegate("div[data-role='page']", "pageshow", function () {
+                if (sf.isAndroid())
+                    sf.getCurrentPage().addClass("sf-m-android");
+                else if (sf.isWindowsPhone())
+                    sf.getCurrentPage().addClass("sf-m-windows");
+                else
+                    sf.getCurrentPage().addClass("sf-m-ios");
+            });
+
+            $(function () {
+
+                $("#devicename").mHeader("setTitle", "Image Editor");
+
+                var canvasSrc = document.getElementById("canvasSrc");
+                var contextSrc = canvasSrc.getContext("2d");
+                contextSrc.font = "15px Georgia";
+                contextSrc.fillText("Click on TakePhoto button to open camera!", 10, 70);
+
+                var canvas = document.getElementById("canvasDest");
+                var context = canvas.getContext("2d");
+                context.font = "15px Georgia";
+                context.fillText("Click on TakePhoto button to open camera!", 10, 70);
+
+                $("#takePhoto").click(function () {
+                    takePhoto();
+                });
+
+                $("#savePhoto").click(function () {
+                    saveImage();
+                });
+
+                $("#apply").click(function () {
+                    applyEffects();
+                });
+
+                $("#canvasDest").hide();
+
+            });
+
+
+            function takePhoto() {
+                $("#canvasDest").hide();
+                $("#canvasSrc").show();
+
+                //Orubase Capture API to invoke native camera
+                Orubase.Media.captureImage({ quality: "50", uritype: "data", encodingtype: "jpg", savetophotolibrary: "true", size: "400*400", cameradirection: "back" }, {
+                    onSuccess: function (Mediafile) {
+                        canvasSrc = document.getElementById("canvasSrc");
+                        contextSrc = canvasSrc.getContext("2d");
+                        contextSrc.clearRect(0, 0, canvasSrc.width, canvasSrc.height);
+                        var image = new Image();
+                        if (sf.isWindowsPhone()) {
+                            var source = "data:image/jpeg;base64," + Mediafile.data;
+                        }
+                        else {
+                            var source = Mediafile.data;
+                        }
+                        image.src = source;
+
+                        image.onload = function () {
+                            contextSrc.drawImage(image, 0, 0, canvasSrc.width, canvasSrc.height);
+                            width = canvasSrc.width;
+                            height = canvasSrc.height;
+                            canvas = document.getElementById("canvasDest");
+                            context = canvas.getContext("2d");
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                        };
+                    },
+                    onFailure: function (error) {
+                        Orubase.Notification.showNotifcation(error, "Alert", OrubaseEnums.NOTIFICATIONTYPES.ALERT);
+                    }
+                });
+            }
+
+            function applyEffects() {
+                if ($("#Grayscale").attr("checked") == "checked")
+                    grayScaleEffect();
+                else
+                    noiseEffect();
+            }
+      
+          //Method to add Grayscale effect
+            function grayScaleEffect() {
+                $("#canvasSrc").hide();
+                $("#canvasDest").show();
+                var imageData = contextSrc.getImageData(0, 0, width, height);
+                var data = imageData.data;
+
+                var p1 = 0.99;
+                var p2 = 0.99;
+                var p3 = 0.99;
+                var er = 0; // extra red
+                var eg = 0; // extra green
+                var eb = 0; // extra blue
+                for (var i = 0, n = data.length; i < n; i += 4) {
+                    var grayscale = data[i] * p1 + data[i + 1] * p2 + data[i + 2] * p3;
+                    data[i] = grayscale + er; // red
+                    data[i + 1] = grayscale + eg; // green
+                    data[i + 2] = grayscale + eb; // blue
+                }
+                context.putImageData(imageData, 0, 0);
+                base64 = canvas.toDataURL("image/png");
+            }
+      
+          //Method to add Noise effect
+            function noiseEffect() {
+                $("#canvasSrc").hide();
+                $("#canvasDest").show();
+                var imageData = contextSrc.getImageData(0, 0, width, height);
+                var data = imageData.data;
+                var p1 = 0.99;
+                var p2 = 0.99;
+                var p3 = 0.99;
+                var er = 0; // extra red
+                var eg = 0; // extra green
+                var eb = 0; // extra blue
+                for (var i = 0, n = data.length; i < n; i += 4) {
+
+                    // generating random color coefficients
+                    var randColor1 = 0.6 + Math.random() * 0.4;
+                    var randColor2 = 0.6 + Math.random() * 0.4;
+                    var randColor3 = 0.6 + Math.random() * 0.4;
+
+                    // assigning random colors to our data
+                    data[i] = data[i] * p2 * randColor1 + er; // green
+                    data[i + 1] = data[i + 1] * p2 * randColor2 + eg; // green
+                    data[i + 2] = data[i + 2] * p3 * randColor3 + eb; // blue
+                }
+
+                // put image date back to context
+                context.putImageData(imageData, 0, 0);
+                base64 = canvas.toDataURL("image/png");
+            }
+
+
+            function saveImage() {
+                var type = "jpeg";
+                if(sf.isWindowsPhone())
+                   type = "jpg";
+                var args = base64.split("base64,");
+                //Orubase Save Image API to save photo to PhotoLibrary
+                Orubase.Media.saveImage(args[1], type, {
+                    onSuccess: function (data) {
+                        Orubase.Notification.showNotifcation("Image successfully added to library!", "Alert", OrubaseEnums.NOTIFICATIONTYPES.ALERT, {
+                            onSuccess: function (data) {
+                            }
+                        });
+                    },
+                    onFailure: function (error) {
+                        Orubase.Notification.showNotifcation(error, "Alert", OrubaseEnums.NOTIFICATIONTYPES.ALERT);
+                    }
+                });
+            }
+  
+    </script>
+        
+    <style>
+          table td{
+              width:50%;
+              text-align:center;
+              vertical-align:top;
+          }
+          table{
+              width:100%;
+              table-cell: center;
+              margin:auto;
+          }
+    </style>
+      
+</head>
+    
+<body ontouchmove="event.preventDefault()" style="background-color:black">
+	<div class="page" data-role="page">
+        <div id="devicename" data-hideforunsupporteddevice="true" data-rendermode="auto" data-role="sf-m-header"></div>
+         <div id='scroll1' data-role="sf-m-scrollpanel" data-targetid='targetdivid'></div>
+         <div id='targetdivid'>
+             <div>
+        <div style="padding-left:40px;padding-right:40px;padding-top:10px">
+        <canvas id="canvasSrc" style="border:1px solid #d3d3d3;width:100%;height:45%">
+            Your browser does not support the HTML5 canvas tag.</canvas>
+            
+            <canvas id="canvasDest" style="border:1px solid #d3d3d3;width:100%;height:45%">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </div>
+        <br />
+        <table border="0">
+            <tr>
+                <td>
+                   <input data-role="sf-m-radiobutton" type="radio" data-rendermode="auto" id="Grayscale" name="option" data-active=true />  Grayscale
+                </td>
+                <td>
+                   <input data-role="sf-m-radiobutton" type="radio" data-rendermode="auto" id="Noise" name="option" /> Noise
+                </td>
+            </tr>
+        </table>
+    <br />
+          <div style="padding:10px;">  <input data-label="Apply" id="apply" data-rendermode="auto" data-role="sf-m-button" /> </div>
+         
+        
+          <div style="padding:10px;">  <input  data-label="Take Photo" id="takePhoto" data-rendermode="auto" data-role="sf-m-button" /> </div>
+        
+       
+   		  <div style="padding:10px;">	<input data-label="Save Photo" id="savePhoto" data-rendermode="auto" data-role="sf-m-button" /> </div>
+        
+        </div>
+    </div>
+    </div>
+  </body>
+  </html>

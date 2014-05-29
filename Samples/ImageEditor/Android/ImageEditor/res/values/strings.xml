@@ -1,0 +1,103 @@
+
+
+<resources>
+
+    <string name="app_name">ImageEditor</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">ImageEditor</string>
+	
+	<!-- General Messages --> 
+     
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="BackKeyAlertText">Are you sure want to exit?</string> 
+    <string name="NetworkAlertTitle">Network Alert</string>
+    <string name="NetworkAlertMessage">Please check your network connection</string>
+    <string name="Retry">Retry</string>
+    <string name="Exit">Exit</string>  
+    <string name="True">true</string>
+    <string name="False">false</string>  
+      
+    <!-- Success Messages --> 
+    		<string name="AddContactSuccess">New Contact Added Successfully</string>    		
+    		<string name="None">none</string>    		
+    		<string name="CameraTypePrimarySuccess">primary</string>  
+    		<string name="CameraTypePrimaryAndSecondarySuccess">primary and secondary</string>
+    
+    		
+    		<string name="DictionaryAddItemSuccess">Item Added Successfully</string>
+    		<string name="DictionaryRemoveItemSuccess">Item successfully removed</string>
+    		<string name="DictionaryRemoveAllItemsSuccess">All items deleted</string> 
+    		
+    		<string name="DirectoryCreatedSuccess">Directory Created Successfully</string> 
+    		<string name="FileCreatedSuccess">File Created Successfully</string> 
+    		<string name="FileDeletedSuccess">File Deleted Successfully</string>    	 
+    		<string name="DirectoryDeletedSuccess">Directory Deleted Successfully</string>    		
+    		<string name="FileWriteSuccess">Content Successfully Written in the file</string> 
+    		
+    		
+    		<string name="NotificationTitle">Alert Title</string> 
+    		<string name="NotificationText">Alert Message</string> 
+    		<string name="CustomNotificationTitle">Title</string> 
+    		<string name="CustomNotificationMessage">Message</string>     		 
+    		<string name="OK">OK</string>
+    		<string name="Cancel">Cancel</string>  
+    		<string name="MaximumNumOfButtonsAndroidError">Maximum allowed number of buttons in custom notification is 3</string>
+    		  
+    		<string name="EmailClientTilteMessage">Choose email client</string>     		  
+    		<string name="MessageSentSuccess">Message sent successfully</string>
+    		
+    		<string name="SQLiteQuerySuccess">query executed successfully</string>
+    		<string name="TableDeletedSuccess">table deleted</string>  
+    		<string name="AllTablesDeletedSuccess">all tables deleted</string>      		
+    		<string name="AllRecordsDeletedSuccess">all records deleted</string>    		  
+    		<string name="DBCreatedSuccess">database created</string>  
+    		   
+    
+    <!-- Failure Messages --> 
+    		<string name="AccelerometerNotSupportedError">Accelerometer not supported in the device</string> 
+    		<string name="EmptyContactNotAddedError">Empty contact cannot be added</string> 
+    		<string name="AudioUnsupportedError">Unsupported Request</string>
+    		<string name="MemoryFullWarning">Memory is Full, please delete some items</string>
+    		<string name="PhoneMemoryFullWarning">Phone memory is Full, please insert SDCard</string>
+    		<string name="CaptureReadFileError">Could not completely read file</string>
+    		<string name="CompassNotSupportedError">Compass not supported in the device</string>  
+    		
+    		  
+    		<string name="DictionaryKeyDoesNotExistsFailure">Key does not exists</string>  
+    		<string name="DictionaryNoItemFoundError">No item found</string>  
+    		
+    		<string name="DirectoryAlreadyExistsError">Directory Already Exists</string>   
+    		<string name="DirectoryCreationFailureError">Directory Creation Failure</string>  
+    		<string name="FileAlreadyExistsError">File Already Exists</string>  
+    		<string name="FileCreationFailureError">File Creation Failure</string>  
+    		<string name="FileNotExistsError">File not Exists</string>  
+    		<string name="FileDeletionError">File Deletion Error</string> 
+    		<string name="DirectoryNotExistsError">Directory Not Exists</string>  
+    		<string name="DirectoryDeletionFailureError">Directory Deletion Failure</string>   
+    		<string name="FileCreationError">File Creation Error</string>  
+    		       		
+    		<string name="IPAddressFailureError">Media Disconnected</string> 
+    		
+    		<string name="GeoLocationServiceNotEnabledError">GeoLocation Service is not enabled</string> 
+    		<string name="LocationProviderNotEnabledError">Location Network Provider is not enabled  </string> 
+    		<string name="LocationTrackingDisabledError">Location Tracking is disabled</string> 
+    		<string name="NetworkOrOfflineAddressNotAvailable">Network is not available and Offline Address is not available</string>
+    		
+    		<string name="EmptyPhoneNumberError">Phone number cannot be empty</string>  
+    		<string name="MessageGenericFailureError">Generic failure cause</string>  
+    		<string name="MessageServiceUnavailableError">Service is currently unavailable</string>  
+    		<string name="NoPDUError">No PDU provided</string>  
+    		<string name="RadioTurnedOffError">Radio was explicitly turned off</string> 
+    		 
+    		<string name="SignatureCaptureFailureError">Signature not captured</string>  
+    		<string name="SignatureCaptureNotSupportedError">Signature Capture is not supported in the device</string>
+    		
+    		<string name="UnsupportedVideoCaptureRequestError">Unsupported Request</string>
+    		
+    		<string name="DatabaseNotFoundError">no such database</string>    
+    		<string name="DBAlreayExistsError">database already exists</string>
+    		<string name="DatabseCreationOrOpenError">Database is not created or open</string>
+
+</resources>

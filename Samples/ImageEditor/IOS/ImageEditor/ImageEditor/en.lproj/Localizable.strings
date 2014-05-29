@@ -1,0 +1,73 @@
+/*
+ *------------------------------------------------------------------------
+ *
+ *  <copyright>
+ *  Contact.h
+ *  Copyright Syncfusion Inc. 2001 - 2013. All rights reserved.
+ *  Use of this code is subject to the terms of our license.
+ *  A copy of the current license can be obtained at any time by e-mailing
+ *  licensing@syncfusion.com. Any infringement will be prosecuted under
+ *  applicable laws.
+ *  </copyright>
+ *
+ *------------------------------------------------------------------------
+ */
+
+//Application Name
+
+"CFBundleDisplayName" = "ImageEditor";
+
+//API Changes
+
+"AccelerometerNotSupportedError"="Accelerometer not supported in this device";
+
+"AllFieldsEmpty"="Fields are empty";
+"AddContactSuccess"="New Contacts Added Successfully";
+"AddContactFailure"="Failure to Add NewContact";
+"EmptyContactNotAddedError"="No Contacts found";
+
+"CompassNotSupportedError"="Compass not Supported in this device";
+
+"NoNetworkConnection"="NoNetworkConnection";
+
+"CameraTypePrimaryAndSecondarySuccess"="primary and secondary";
+"CameraTypePrimary"="primary";
+
+"DictionaryAddItemSuccess"="Item Added Successfully";
+"DictionaryKeyDoesNotExistsFailure"="Key does not exists";
+"DictionaryRemoveItemSuccess"="Item successfully removed";
+"DictionaryRemoveAllItemsSuccess"="All items deleted";
+"DictionaryNoItemFoundError"="No item found";
+"DirectoryAlreadyExistsError"="Directory Already Exists";
+"DirectoryCreatedSuccess"="Directory Created Successfully";
+"DirectoryCreationFailureError"="Directory Creation Failure";
+
+"FileCreatedSuccess"="File Created Successfully";
+"FileAlreadyExistsError"="File Already Exists";
+"FileCreationFailureError"="File Creation Failure";
+"FileDeletedSuccess"="File Deleted Successfully";
+"FileNotExistsError"="File not Exists";
+"DirectoryDeletedSuccess"="Directory Deleted Successfully";
+"DirectoryDeletionFailureError"="Directory Deletion Failure";
+"FileWriteSuccess"="Content Successfully Written in the file";
+"FileCreationError"="File Creation Error";
+"DirectoryNotExistsError"="Directory Does not Exist";
+"FileNotExistsError"="File Does not Exist";
+
+"AlertMessage" = "Alert Message";
+"AlertTitle"="Alert Title";
+"OK"="OK";
+"Cancel"="Cancel";
+
+"MessageSentSuccess"="Message sent successfully";
+
+"SignatureCaptureFailureError"="Signature not captured";
+
+"SQLiteQuerySuccess"="query executed successfully";
+"TableDeletedSuccess"="TableDeletedSuccess";
+"AllTablesDeletedSuccess"="All Tables deleted successfully";
+"AllRecordsDeletedSuccess"="All records deleted";
+
+"Reload"="Reload";
+
+

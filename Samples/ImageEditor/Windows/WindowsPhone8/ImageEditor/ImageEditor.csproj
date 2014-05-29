@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25455175-D6DB-4262-B225-82177F27EDF7}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageEditor</RootNamespace>
+    <AssemblyName>ImageEditor</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>ImageEditor_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>ImageEditor.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OrubaseAppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrubaseAppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OrubaseErrorsStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrubaseErrorsStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\OrubaseSuccessResultsStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrubaseSuccessResultsStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Resources\ThemeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="WebApplication\css\images\ajax-loader.gif" />
+    <Resource Include="WebApplication\css\images\bluelight.gif" />
+    <Resource Include="WebApplication\css\images\darknight.gif" />
+    <Resource Include="WebApplication\css\images\metroblue.gif" />
+    <Resource Include="WebApplication\css\images\spinach.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WebApplication\.DS_Store" />
+    <None Include="WebApplication\css\.DS_Store" />
+    <None Include="WebApplication\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\basecircle.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\favs.addto.png" />
+    <Content Include="Images\favs.png" />
+    <Content Include="Images\feature.alarm.png" />
+    <Content Include="Images\feature.calendar.png" />
+    <Content Include="Images\feature.camera.png" />
+    <Content Include="Images\feature.email.png" />
+    <Content Include="Images\feature.phone.png" />
+    <Content Include="Images\feature.search.png" />
+    <Content Include="Images\feature.settings.png" />
+    <Content Include="Images\feature.video.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\like.png" />
+    <Content Include="Images\microphone.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\new.png" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\overflowdots.png" />
+    <Content Include="Images\questionmark.png" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="Images\stop.png" />
+    <Content Include="Images\sync.png" />
+    <Content Include="Images\transport.ff.png" />
+    <Content Include="Images\transport.pause.png" />
+    <Content Include="Images\transport.play.png" />
+    <Content Include="Images\transport.rew.png" />
+    <Content Include="Images\upload.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="WebApplication\Camera.html" />
+    <Content Include="WebApplication\css\images\ajax-loader.png" />
+    <Content Include="WebApplication\css\images\andback.png" />
+    <Content Include="WebApplication\css\images\Android.png" />
+    <Content Include="WebApplication\css\images\android_dark.png" />
+    <Content Include="WebApplication\css\images\android_light.png" />
+    <Content Include="WebApplication\css\images\Apple.png" />
+    <Content Include="WebApplication\css\images\icons-18-black.png" />
+    <Content Include="WebApplication\css\images\icons-18-white.png" />
+    <Content Include="WebApplication\css\images\icons-36-black.png" />
+    <Content Include="WebApplication\css\images\icons-36-white.png" />
+    <Content Include="WebApplication\css\images\Image1.png" />
+    <Content Include="WebApplication\css\images\Image2.png" />
+    <Content Include="WebApplication\css\images\Image3.png" />
+    <Content Include="WebApplication\css\images\Image4.png" />
+    <Content Include="WebApplication\css\images\ios.png" />
+    <Content Include="WebApplication\css\images\Left-Arrow.png" />
+    <Content Include="WebApplication\css\images\Left-ArrowActive.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-bluelight.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-common.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-darknight.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-metroblue.png" />
+    <Content Include="WebApplication\css\images\sf-mobile-spinach.png" />
+    <Content Include="WebApplication\css\images\shared-sprite.png" />
+    <Content Include="WebApplication\css\images\windows.png" />
+    <Content Include="WebApplication\css\images\Windows8.png" />
+    <Content Include="WebApplication\css\images\windowstool_dark.png" />
+    <Content Include="WebApplication\css\images\windowstool_light.png" />
+    <Content Include="WebApplication\css\jquery.mobile-1.3.1.min.css" />
+    <Content Include="WebApplication\css\sf.mobile.shared.min.css" />
+    <Content Include="WebApplication\css\site.mobile.css" />
+    <Content Include="WebApplication\js\jquery-2.0.2.min.js" />
+    <Content Include="WebApplication\js\jquery.mobile-1.3.1.min.js" />
+    <Content Include="WebApplication\js\Orubase-2.1.0.58.min.js" />
+    <Content Include="WebApplication\js\sf.mobile.core.min.js" />
+    <Content Include="WebApplication\js\sf.mobile.shared.min.js" />
+    <Content Include="WebApplication\js\Utility.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OrubaseAppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrubaseAppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OrubaseErrorsStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrubaseErrorsStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\OrubaseSuccessResultsStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrubaseSuccessResultsStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Orubase.Native.WindowsPhone" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WebApplication\library\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
